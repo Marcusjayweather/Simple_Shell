@@ -1,6 +1,7 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
+/*---Libraries---*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -16,6 +17,7 @@
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
+
 /* convert_number */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
@@ -119,6 +121,11 @@ void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
+
+/*builtin shell commands*/
+int _cd(char **argv);
+int _help(char **argv);
+int _exit(char **argv);
 
 /**
  *struct passinfo - contains pseudo-arguements to pass into a function,
