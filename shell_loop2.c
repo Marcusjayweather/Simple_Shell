@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-void find_cmd(info_t *info)
+void find_cmd(ino_t *info)
 {
 	char *path = NULL;
 	int i, k;
@@ -48,7 +48,7 @@ void find_cmd(info_t *info)
  *
  * Return: void
  */
-void fork_cmd(info_t *info)
+void fork_cmd(ino_t *info)
 {
 	pid_t child_pid;
 
